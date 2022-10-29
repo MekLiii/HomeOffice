@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Nav } from "./index";
 import { Outlet } from "react-router-dom";
-import { Mainbar } from "./style";
+import { Mainbar, ChildrenWrapper } from "./style";
 import { useNavigate } from "react-router-dom";
 
 const Layout = () => {
@@ -13,7 +13,9 @@ const Layout = () => {
   return (
     <Mainbar>
       <Nav />
-      <Outlet />
+      <ChildrenWrapper>
+        <Outlet />
+      </ChildrenWrapper>
     </Mainbar>
   );
 };

@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 import { store } from "./store/store";
 import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -8,6 +7,7 @@ import Layout from "./layout/Layout";
 import { ThemeProvider } from "styled-components";
 import {theme} from '!globalStyles/theme'
 import './index.css'
+import Home from "./pages/home/Home";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/home",
-        element: (<App />),
+        element: (<Home />),
       },
     ],
   },
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <Provider store={store}>
-      <ThemeProvider theme={theme['dark']}>
+      <ThemeProvider theme={theme['light']}>
         <RouterProvider router={router} />
       </ThemeProvider>
     </Provider>
