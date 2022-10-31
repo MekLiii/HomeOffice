@@ -7,6 +7,7 @@ export const theme = {
         batteryChargedBlue:"#24b9d7",
         antiFlashWhite: "#f1f1f1",
         spanishGray:'#9b9b9b',
+        raisinBlack:"#232323",
     },
     logoColor:"#0080FF",
 }   
